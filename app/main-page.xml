@@ -1,0 +1,16 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="My Shop" class="bg-purple-600 text-white" />
+    
+    <ListView items="{{ shopItems }}" class="list-group">
+        <ListView.itemTemplate>
+            <GridLayout rows="auto" columns="auto, *" class="p-4 border-b border-gray-200">
+                <Image src="{{ imageUrl }}" width="80" height="80" class="rounded-lg" row="0" col="0" />
+                <StackLayout row="0" col="1" class="ml-4">
+                    <Label text="{{ name }}" class="text-lg font-bold" />
+                    <Label text="{{ description }}" class="text-gray-600" textWrap="true" />
+                    <Label text="{{ '$' + price }}" class="text-purple-600 font-bold mt-1" />
+                </StackLayout>
+            </GridLayout>
+        </ListView.itemTemplate>
+    </ListView>
+</Page>
